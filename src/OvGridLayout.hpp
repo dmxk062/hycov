@@ -65,6 +65,10 @@ public:
   virtual void moveWindowTo(CWindow *, const std::string &dir);
   virtual void onEnable();
   virtual void onDisable();
+
+
+  Vector2D predictSizeForNewWindowTiled();
+
   void applyNodeDataToWindow(SOvGridNodeData *);
   void calculateWorkspace(const int &);
   int getNodesNumOnWorkspace(const int &);

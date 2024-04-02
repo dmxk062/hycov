@@ -2,6 +2,7 @@
 #include "globals.hpp"
 #include "OvGridLayout.hpp"
 #include "dispatchers.hpp"
+#include <hyprland/src/helpers/Vector2D.hpp>
 
 // find next focus window after remove a window
 CWindow *OvGridLayout::getNextWindowCandidate(CWindow* plastWindow) {
@@ -415,6 +416,12 @@ void OvGridLayout::replaceWindowDataWith(CWindow *from, CWindow *to)
 void OvGridLayout::moveWindowTo(CWindow *, const std::string &dir)
 {
     ; // empty
+}
+
+
+
+Vector2D OvGridLayout::predictSizeForNewWindowTiled() {
+    return Vector2D{0,0};
 }
 
 void OvGridLayout::changeToActivceSourceWorkspace()
